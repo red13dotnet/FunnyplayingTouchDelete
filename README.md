@@ -14,15 +14,14 @@ I had considered just cutting off the touch pad from the ribbon cable but I have
 I can only surmise that this is due to electrical interference causing a change in the measured capacitance of the circuit itself.
  
  
-The initial idea for the fix was inspired by a tweet by '@tailchao' https://twitter.com/tailchao/status/1482774836200058882?cxt=HHwWhMC9mfD275MpAAAA
-
-They described the touch control circuit on a Funnyplaying Gameboy Color Retropixel 2.1  kit. and had found  that the touch sensor was controlled by a TC233A touch control chip. 
+The initial idea for the fix was inspired by a [tweet by @tailchao](https://twitter.com/tailchao/status/1482774836200058882?cxt=HHwWhMC9mfD275MpAAAA).
+In it, they described the touch control circuit from a Funnyplaying Gameboy Color Retropixel 2.1 kit and had found that the touch sensor was controlled by a TC233A touch control chip. 
 
 [Datasheet](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/e22346c71116e0eb99eca2700e2262e65421ffef/2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf)
 
 [English Translated Datasheet](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/a8f151cd3c60040361b5ef63581afe3d4881f6b5/ENG_TRANSLATED_2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf)
 
-Guessing that Funnyplaying would likely reuse parts of their designs across their different products, I checked the V3.2 PCB that came with my ITA kit and found the same TC233A chip.
+I made an educated guess that Funnyplaying would likely reuse parts of their designs across their different products and upon checking the V3.2 PCB that came with my ITA kit, I found the same TC233A chip.
 
 ![Component locations](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/5900527a5ed1d702002e2a67400b6d284d87c9a4/ITA_V3.2/FP_ITA_PCB_V3.2_Touch.png?raw=true)
 
@@ -40,7 +39,7 @@ And after cleanup
 If you are going for permanent removal you could probably just snip the chip (which we can now see is part U2) off its legs, or just pin 1 (output) even.
 
 
-Don't forget to solder the L R and Select wires if you still want control of brightness and the OSD, otherwise all menu options will be stuck as you last had them set.
+Don't forget to solder the L R and Select wires if you still want control of brightness and the OSD, otherwise all menu options and the brightness level will be stuck as you last had them set.
 
 
 
@@ -48,6 +47,7 @@ I have tested the system out after the fix and have had no further issues with b
 
 I have no pictures of it working because it works just as it did before, except the brightness and OSD menu are no longer posessed.
 
-I am guessing that this fix would apply to any Funnyplaying kit that has the TC233A chip but I don't have any other kits to check myself, so I created this github repo so anyone can contribute their own findings.  I am especially interested in learning which other kits are using the same touch controller.
+I am guessing that this fix would apply to any Funnyplaying kit that has the TC233A chip but I don't have any other kits to check myself, so I created this [github repo](https://github.com/red13dotnet/FunnyplayingTouchDelete) so anyone can contribute their own findings.  
+I am especially interested in learning which other kits are using the same touch controller.  For instance, I am am 99% certain from looking at product images that the 6 pin chip next to the touch sensor "flag" on the 3.0 IPS kit is a TC233A but cannot be sure without a better closeup image.
 
 
