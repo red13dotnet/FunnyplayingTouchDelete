@@ -10,7 +10,7 @@ I had considered just cutting off the touch pad from the ribbon cable but I have
 I can only surmise that this is due to electrical interference causing a change in the measured capacitance of the circuit itself.
  
 The initial idea for the fix was inspired by a tweet by '@tailchao' https://twitter.com/tailchao/status/1482774836200058882?cxt=HHwWhMC9mfD275MpAAAA
-They described the touch control circuit on a Funnyplaying Gameboy Color Retropixel 2.1  kit. and had found  that the touch sensor was controlled by a TC233A touch control chip.
+They described the touch control circuit on a Funnyplaying Gameboy Color Retropixel 2.1  kit. and had found  that the touch sensor was controlled by a TC233A touch control chip. 2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf
 
 
 On a hunch, I checked the V3.2 PCB that came with my ITA kit and found the same TC233A chip.
