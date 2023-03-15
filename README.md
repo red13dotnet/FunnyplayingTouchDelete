@@ -26,13 +26,18 @@ Guessing that Funnyplaying would likely reuse parts of their designs across thei
 
 ![Component locations](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/5900527a5ed1d702002e2a67400b6d284d87c9a4/ITA_V3.2/FP_ITA_PCB_V3.2_Touch.png?raw=true)
 
-From my reading of the datasheet, it may be possible to lower the sensitivity of the touch sensor by changing the values of C5 and R15 but, like many others, I am in the "Buttons Good, Touch Sensor Bad!" camp.
-I proceeded to remove the chip after (partially?) tracing out the schematic and verifying that there was a pullup resistor on the output pin: 
+From my reading of the datasheet, it may be possible to lower the sensitivity of the touch sensor by changing the values of C5 and R15 but, like many others, I am in the "Buttons Good, Touch Sensor Bad!" camp.  It is also possible the reason that some people have more trouble than others is the tolerance variances on those two components.
+ 
 
 ![Partial? schematic](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/0d35d96eb914a9731e33d4843586f79f27cec914/ITA_V3.2/TC233A_Partial_Pinout.png?raw=true)
+I proceeded to remove the chip after (partially? Not sure about pins 4 and 6) tracing out the schematic and verifying that there was a pullup resistor on the output pin (pin 1).
+
 
 This can be done with a fine point soldering iron if you are careful.  Kapton, flux, solder wick and ceramic tweezers are your friend.
-
+![Chip removal](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/3ba0381d7a79edd89736f5971ebff70a727d11f3/ITA_V3.2/TC233A_Removal_1.png?raw=true)
+And after cleanup
+![Cleaned up after removal](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/3ba0381d7a79edd89736f5971ebff70a727d11f3/ITA_V3.2/TC233A_Removal_2.png?raw=true)
+If you are going for permanent removal you could probably just snip the chip (which we can now see is part U2) off its legs, or just pin 1 (output) even.
 
 
 Don't forget to solder the L R and Select wires if you still want control of brightness and the OSD, otherwise all menu options will be stuck as you last had them set.
@@ -43,8 +48,6 @@ I have tested the system out after the fix and have had no further issues with b
 
 I have no pictures of it working because it works just as it did before, except the brightness and OSD menu are no longer posessed.
 
-I am guessing that this fix would apply to any Funnyplaying kit that has that chip but I don't have any other kits to check myself, so I created this github repo so anyone can contribute their own findings.  I am especially interested in learning which other kits are using the same touch controller.
+I am guessing that this fix would apply to any Funnyplaying kit that has the TC233A chip but I don't have any other kits to check myself, so I created this github repo so anyone can contribute their own findings.  I am especially interested in learning which other kits are using the same touch controller.
 
-
-In addition to the possibility 
 
