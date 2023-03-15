@@ -22,7 +22,7 @@ On a hunch, I checked the V3.2 PCB that came with my ITA kit and found the same 
 
 ![Component locations](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/5900527a5ed1d702002e2a67400b6d284d87c9a4/ITA_V3.2/FP_ITA_PCB_V3.2_Touch.png?raw=true)
 
-
+From my reading of the datasheet, it may be possible to lower the sensitivity of the touch sensor by changing the values of C5 and R15 but, like many others, I am in the "Buttons Good, Touch Sensor Bad!" camp.
 I proceeded to remove the chip after tracing out the schematic and verifying that there was a pullup resistor on the output pin: 
 
 ![Partial? schematic](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
