@@ -9,18 +9,23 @@ In my case, everything would work normally for 30-40 minutes but then the bright
 I had considered just cutting off the touch pad from the ribbon cable but I have read posts by others indicating that the strange behavior persisted.
 I can only surmise that this is due to electrical interference causing a change in the measured capacitance of the circuit itself.
  
+ 
 The initial idea for the fix was inspired by a tweet by '@tailchao' https://twitter.com/tailchao/status/1482774836200058882?cxt=HHwWhMC9mfD275MpAAAA
+
 They described the touch control circuit on a Funnyplaying Gameboy Color Retropixel 2.1  kit. and had found  that the touch sensor was controlled by a TC233A touch control chip. 
 
-Datasheet: https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/e22346c71116e0eb99eca2700e2262e65421ffef/2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf
+[Datasheet](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/e22346c71116e0eb99eca2700e2262e65421ffef/2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf)
 
-Eng Translated Datasheet: https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/a8f151cd3c60040361b5ef63581afe3d4881f6b5/ENG_TRANSLATED_2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf
+[English Translated Datasheet](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/a8f151cd3c60040361b5ef63581afe3d4881f6b5/ENG_TRANSLATED_2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf)
 
 On a hunch, I checked the V3.2 PCB that came with my ITA kit and found the same TC233A chip.
 
+![Component locations](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/5900527a5ed1d702002e2a67400b6d284d87c9a4/ITA_V3.2/FP_ITA_PCB_V3.2_Touch.png?raw=true)
+
+
 I proceeded to remove the chip after tracing out the schematic and verifying that there was a pullup resistor on the output pin: 
 
-
+![Partial? schematic](https://github.com/[username]/[reponame]/blob/[branch]/image.jpg?raw=true)
 
 This can be done with a fine point soldering iron if you are careful.  Kapton, flux, solder wick and ceramic tweezers are your friend.
 
