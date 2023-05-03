@@ -1,6 +1,6 @@
 # FunnyplayingTouchDelete
 Completely deleting the touch sensor from Funnyplaying ITA and similar kits to remove accidental and false positive triggers of brightness and OSD menu.
-You can remove the touch sensor from the Funnyplaying ITA and likely other Funnyplaying screen kits which share a similar touch control circuit.
+You can remove the touch sensor from the Funnyplaying ITA, IPS 3.0 and likely other Funnyplaying screen kits which share a similar touch control circuit.
 
 
 I, like many others, have experienced problems with the touch sensor on my Funnyplaying ITA kit. 
@@ -21,7 +21,7 @@ In it, they described the touch control circuit from a Funnyplaying Gameboy Colo
 
 [English Translated Datasheet](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/a8f151cd3c60040361b5ef63581afe3d4881f6b5/ENG_TRANSLATED_2202251530_Shenzhen-Fuman-Elec-TC233A_C2798022.pdf)
 
-I made an educated guess that Funnyplaying would likely reuse parts of their designs across their different products and upon checking the V3.2 PCB that came with my ITA kit, I found the same TC233A chip.
+I made an educated guess that Funnyplaying would likely reuse parts of their designs across their different products and upon checking the ITA kit V3.2 PCB, I found the same TC233A chip.
 
 ![Component locations](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/5900527a5ed1d702002e2a67400b6d284d87c9a4/ITA_V3.2/FP_ITA_PCB_V3.2_Touch.png?raw=true)
 
@@ -41,13 +41,16 @@ If you are going for permanent removal you could probably just snip the chip (wh
 
 Don't forget to solder the L R and Select wires if you still want control of brightness and the OSD, otherwise all menu options and the brightness level will be stuck as you last had them set.
 
+Another reddit user (https://www.reddit.com/user/PhishGreenLantern/) has confirmed this fix works on a Funnyplaying 3.0 IPS kit as well.
+The primary difference being that the chip was a substituted part, nearly idintical to the TC233A, the TTP223 
+Datasheet: https://datasheet.lcsc.com/szlcsc/TTP223-BA6_C80757.pdf
+![Component Location](https://github.com/red13dotnet/FunnyplayingTouchDelete/blob/720bef52e873ebe0092b6ab1505b4bed29b34d15/IPS_V3.0/223B_Location.jpg?raw=true)
 
 
 I have tested the system out after the fix and have had no further issues with brightness changing or the OSD activating on its own. 
 
 I have no pictures of it working because it works just as it did before, except the brightness and OSD menu are no longer posessed.
 
-I am guessing that this fix would apply to any Funnyplaying kit that has the TC233A chip but I don't have any other kits to check myself, so I created this [github repo](https://github.com/red13dotnet/FunnyplayingTouchDelete) so anyone can contribute their own findings.  
-I am especially interested in learning which other kits are using the same touch controller.  For instance, I am am 99% certain from looking at product images that the 6 pin chip next to the touch sensor "flag" on the 3.0 IPS kit is a TC233A but cannot be sure without a better closeup image.
+I am guessing that this fix would apply to any Funnyplaying kit that has the TC233A or TTP223 chip but I don't have any other kits to check myself, so I created this [github repo](https://github.com/red13dotnet/FunnyplayingTouchDelete) so anyone can contribute their own findings.  
 
 
